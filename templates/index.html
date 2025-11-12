@@ -88,11 +88,6 @@
           <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-blue-500/25">View Projects</a>
           <a href="#contact" class="px-8 py-3 border-2 border-gray-600 text-gray-300 font-medium rounded-lg hover:border-blue-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-105 hover:bg-gray-800/50">Contact Me</a>
         </div>
-        <div class="flex justify-center space-x-6 pt-8 slide-in-up stagger-4">
-          <a href="{{ data.github }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-all duration-200 transform hover:scale-110"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-          <a href="{{ data.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition-all duration-200 transform hover:scale-110"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-          <a href="mailto:{{ data.email }}" class="text-gray-400 hover:text-blue-400 transition-all duration-200 transform hover:scale-110"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22,6 12,13 2,6"></polyline></svg></a>
-        </div>
       </div>
     </div>
   </section>
@@ -115,22 +110,6 @@
                     <h3 class="text-2xl font-semibold text-white mb-4">Data Scientist at Matrimony.com | AI/ML Engineer</h3>
                     <p class="text-lg text-gray-300 leading-relaxed">{{ data.about_text }}</p>
                 </div>
-                <div class="grid sm:grid-cols-2 gap-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-3 rounded-lg shadow-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M12 2a10 10 0 0 0-2.34 19.78 10 10 0 0 0 1.9-1.22 4.99 4.99 0 0 1-5.12-6.57A5 5 0 0 1 12 10a5 5 0 0 1 5.56 4.99 10 10 0 0 0 1.9 1.22A10 10 0 0 0 12 2z"></path><path d="M12 10a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"></path></svg></div>
-                        <div>
-                            <h4 class="font-semibold text-white mb-2">AI Innovation</h4>
-                            <p class="text-gray-400 text-sm">Building cutting-edge AI solutions that push the boundaries of what's possible.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-3 rounded-lg shadow-lg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-                        <div>
-                            <h4 class="font-semibold text-white mb-2">Real Impact</h4>
-                            <p class="text-gray-400 text-sm">Focused on creating solutions that solve real-world problems and deliver measurable value.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -144,19 +123,65 @@
         <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full mb-6"></div>
         <p class="text-lg text-gray-400 max-w-2xl mx-auto">A showcase of my work spanning web development, AI engineering, and data science projects.</p>
       </div>
+
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for project in data.projects %}
-        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-700 hover:border-blue-500/50 slide-in-up stagger-{{ loop.index }}">
+
+        <!-- Export Marketing Company Website -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-700 hover:border-blue-500/50 slide-in-up stagger-1">
           <div class="p-6">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-medium text-blue-400 bg-blue-900/30 px-3 py-1 rounded-full border border-blue-500/30">{{ project.category }}</span>
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3">{{ project.title }}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-6">{{ project.description }}</p>
-            <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-blue-400 hover:text-cyan-400 font-medium transition-all duration-200 hover:translate-x-1"><span>View Project</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+            <span class="text-xs font-medium text-blue-400 bg-blue-900/30 px-3 py-1 rounded-full border border-blue-500/30">Web Development</span>
+            <h3 class="text-xl font-semibold text-white mt-3 mb-2">Export Marketing Company Website</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              A professional corporate website for an export-import marketing firm that showcases services, product catalogs, and contact portals for international trade.
+            </p>
+            <a href="https://www.sinfinifzc.net/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 text-blue-400 hover:text-cyan-400 font-medium transition-all duration-200 hover:translate-x-1">
+              <span>View Project</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
           </div>
         </div>
-        {% endfor %}
+
+        <!-- Cake E-commerce Website -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-700 hover:border-blue-500/50 slide-in-up stagger-2">
+          <div class="p-6">
+            <span class="text-xs font-medium text-pink-400 bg-pink-900/30 px-3 py-1 rounded-full border border-pink-500/30">E-commerce</span>
+            <h3 class="text-xl font-semibold text-white mt-3 mb-2">Cake E-commerce Website</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              A fully responsive e-commerce platform for a cake shop that enables customers to browse, customize, and order cakes online with integrated analytics and payment gateway.
+            </p>
+            <a href="https://cake-nexdem0.onrender.com" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 font-medium transition-all duration-200 hover:translate-x-1">
+              <span>View Project</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ongoing Project: UI/UX Design and AI Interviewer -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-700 hover:border-blue-500/50 slide-in-up stagger-3">
+          <div class="p-6">
+            <span class="text-xs font-medium text-green-400 bg-green-900/30 px-3 py-1 rounded-full border border-green-500/30">Ongoing Project</span>
+            <h3 class="text-xl font-semibold text-white mt-3 mb-2">AI Interviewer & Multilingual Assessment System</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              A smart AI interviewer that conducts voice-based interviews using Text-to-Speech (TTS) and Speech-to-Text (STT). Supports regional languages, auto-analyzes candidate responses, and aligns results with resume and job descriptions. Includes UI/UX design for a companion mobile app.
+            </p>
+            <a href="#" class="inline-flex items-center space-x-2 text-green-400 hover:text-cyan-400 font-medium transition-all duration-200 hover:translate-x-1">
+              <span>Coming Soon</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -174,14 +199,12 @@
             <div class="bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 border-l-4 border-blue-500 hover:border-cyan-400 hover:scale-102 slide-in-up stagger-{{ loop.index }}">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div class="flex items-center space-x-3 mb-2 md:mb-0">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                         <div>
                             <h3 class="text-xl font-semibold text-white">{{ exp.role }}</h3>
                             <p class="text-blue-400 font-medium">{{ exp.company }}</p>
                         </div>
                     </div>
                     <div class="flex items-center space-x-2 text-gray-400">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         <span class="text-sm font-medium">{{ exp.period }}</span>
                     </div>
                 </div>
@@ -199,44 +222,6 @@
             <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full mb-6"></div>
             <p class="text-lg text-gray-400 max-w-2xl mx-auto">Let's discuss how we can work together on your next AI project or data science initiative.</p>
-        </div>
-        <div class="grid lg:grid-cols-2 gap-12">
-            <div class="space-y-8 slide-in-left">
-                <div class="space-y-6">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-gradient-to-br from-blue-600 to-cyan-600 p-3 rounded-lg shadow-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-                        <div>
-                            <h4 class="font-semibold text-white">Email</h4>
-                            <a href="mailto:{{ data.email }}" class="text-blue-400 hover:text-cyan-400 transition-colors">{{ data.email }}</a>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-gradient-to-br from-emerald-600 to-teal-600 p-3 rounded-lg shadow-lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-                        <div>
-                            <h4 class="font-semibold text-white">Phone</h4>
-                            <a href="tel:{{ data.phone }}" class="text-blue-400 hover:text-cyan-400 transition-colors">{{ data.phone }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-8 border border-gray-600 shadow-xl slide-in-right">
-                <h3 class="text-xl font-semibold text-white mb-6">Send a Message</h3>
-                <form method="post" action="{{ url_for('contact') }}" class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-white placeholder-gray-500" placeholder="Your full name">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-white placeholder-gray-500" placeholder="your.email@example.com">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-none text-white placeholder-gray-500" placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium py-3 px-6 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-2xl hover:shadow-blue-500/25"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg><span>Send Message</span></button>
-                </form>
-            </div>
         </div>
     </div>
   </section>
